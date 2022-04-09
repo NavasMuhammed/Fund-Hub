@@ -1,20 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Body from './components/body/Body';
-import Topbar from './components/topbar/Topbar';
-// import { SafeAreaView } from 'react-native-safe-area-context';
+
+import Home from './components/pages/home/Home';
+import Payment from './components/pages/payment/Payment';
+import Review from './components/pages/review/Review';
+
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      
-      <Topbar />
-      <Body />
+
+      <Home />
+      {/* <Review/> */}
+      {/* <Payment/> */}
 
     </View>
 
-      
-    
+
+
   );
 }
 
@@ -22,17 +26,16 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    flex:1,
-    paddingTop:35,
+    flex: 1,
     
     backgroundColor: 'black'
-   
-    
+
+
   },
   text: {
     color: 'white',
 
   },
-  
+
 
 });
