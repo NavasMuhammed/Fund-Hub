@@ -3,11 +3,18 @@ import React from 'react'
 import Body from './body/Body';
 import Topbar from './topbar/Topbar';
 import Menu from './menu/Menu';
-const Home = () => {
+import { Button } from 'react-native';
+const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
         {/* <Menu/> */}
         <Topbar/>
+       
+      <Button
+        title="Go to Review"
+        onPress={() => navigation.navigate('Review')}
+      />
+    
         <Body/>
     </View>
   )

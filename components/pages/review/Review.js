@@ -1,12 +1,16 @@
-import { View, Text,StyleSheet } from 'react-native'
+import { View, Text,StyleSheet,Button } from 'react-native'
 import React from 'react'
 import ReviewTopbar from './topbar/ReviewTopbar'
 import ReviewBody from './body/ReviewBody'
 
-const Review = () => {
+const Review = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ReviewTopbar/>
+      <Button
+        title="Go to Project"
+        onPress={() => navigation.navigate('Project')}
+      />
       <ReviewBody/>
     </View>
   )

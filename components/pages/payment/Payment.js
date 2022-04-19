@@ -1,13 +1,17 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet,Button } from 'react-native'
 import React from 'react'
 import PaymentTopbar from './topbar/PaymentTopbar'
 import PaymentBody from './body/PaymentBody'
 
-const Payment = () => {
+const Payment = ({navigation}) => {
     return (
         <View style={styles.container}>
 
             <PaymentTopbar />
+            <Button
+        title="Go to Review"
+        onPress={() => navigation.navigate('Review')}
+      />
             <PaymentBody />
         </View>
     )
