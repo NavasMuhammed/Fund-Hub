@@ -8,6 +8,8 @@ const Body = () => {
         <ScrollView vertical showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
             <View style={styles.cardContainer}>
+                    
+                
                 <Card/>
                 <Card/>
                 <Card/>

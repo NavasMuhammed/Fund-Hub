@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Home from './components/pages/home/Home';
 import Payment from './components/pages/payment/Payment';
+import Project from './components/pages/project/Project';
 import Review from './components/pages/review/Review';
 
 
@@ -11,9 +12,10 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <Home />
+      {/* <Home /> */}
       {/* <Review/> */}
       {/* <Payment/> */}
+      <Project/>
 
     </View>
 

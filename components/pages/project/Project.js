@@ -1,35 +1,31 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
-import Body from './body/Body';
-import Topbar from './topbar/Topbar';
-import Menu from './menu/Menu';
-const Home = () => {
+import ProjectTopbar from './topbar/ProjectTopbar'
+import ProjectBody from './body/ProjectBody'
+
+const Project = () => {
   return (
     <View style={styles.container}>
-        {/* <Menu/> */}
-        <Topbar/>
-        <Body/>
+        <ProjectTopbar />
+        <ProjectBody/>
     </View>
   )
 }
 
-export default Home
+export default Project
 const styles = StyleSheet.create({
     container: {
       alignItems: 'center',
       justifyContent: 'center',
-      flex:1,
-      paddingTop:35,
+      flex: 1,
       
       backgroundColor: 'black'
-     
-      
-    },
-    text: {
-      color: 'white',
+  
   
     },
     
+    
+  
   
   });
   

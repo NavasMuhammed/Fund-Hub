@@ -1,47 +1,49 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const Card = () => {
     return (
-        <View style={styles.card}>
+        <TouchableOpacity>
+            <View style={styles.card}>
 
-            <Image style={styles.project} source={require('./project.jpg')} />
-            <Text style={styles.text}>Farm Frenzy: The farm building game:</Text>
-            <Text style={styles.sub}>grow animals and sell products and create profit and
-                upgrade farm
-            </Text>
-            <View style={styles.line}>
-                <View style={styles.inner}></View>
-            </View>
-            <View style={styles.bottom}>
-                <View style={styles.bottomin}>
-                    <Text style={styles.bottomtext}>
-                        58%
-                        funded
-                    </Text>
+                <Image style={styles.project} source={require('./project.jpg')} />
+                <Text style={styles.text}>Farm Frenzy: The farm building game:</Text>
+                <Text style={styles.sub}>grow animals and sell products and create profit and
+                    upgrade farm
+                </Text>
+                <View style={styles.line}>
+                    <View style={styles.inner}></View>
                 </View>
-                <View style={styles.bottomin}>
-                    <Text style={styles.bottomtext}>
-                        21 
-                        backers
-                    </Text>
+                <View style={styles.bottom}>
+                    <View style={styles.bottomin}>
+                        <Text style={styles.bottomtext}>
+                            58%
+                            funded
+                        </Text>
+                    </View>
+                    <View style={styles.bottomin}>
+                        <Text style={styles.bottomtext}>
+                            21
+                            backers
+                        </Text>
+                    </View>
+                    <View style={styles.bottomin}>
+                        <Text style={styles.bottomtext}>
+                            21  days to go
+                        </Text>
+                    </View>
                 </View>
-                <View style={styles.bottomin}>
-                    <Text style={styles.bottomtext}>
-                        21  days to go
-                    </Text>
+                <View style={styles.category}>
+                    <Image style={styles.cate} source={require('./categories.png')} />
+                    <Text style={styles.catetext}>  simulation game</Text>
                 </View>
+
+
+
+
+
             </View>
-            <View style={styles.category}>
-            <Image style={styles.cate} source={require('./categories.png')} />
-            <Text style={styles.catetext}>  simulation game</Text>
-            </View>
-            
-
-
-
-
-        </View>
+        </TouchableOpacity>
     )
 }
 
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
         // top:50,
         // position: 'relative',
         width: 400,
-        height:450,
+        height: 450,
         backgroundColor: 'rgba(31, 29, 29, 1)',
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
@@ -68,7 +70,7 @@ const styles = StyleSheet.create({
     },
     sub: {
         color: 'white',
-        bottom:80,
+        bottom: 80,
         fontSize: 15,
 
     },
@@ -77,7 +79,7 @@ const styles = StyleSheet.create({
         height: 220,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
-        bottom:110,
+        bottom: 110,
     },
     line: {
         width: 350,
@@ -98,14 +100,14 @@ const styles = StyleSheet.create({
         width: 299,
         height: 10,
         bottom: 55,
-        
+
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
     bottomin: {
         width: 70,
         height: 50,
-        
+
         flexDirection: 'column',
 
 
@@ -117,19 +119,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         fontSize: 18,
     },
-    category:{
+    category: {
         flexDirection: 'row',
-        left:-100,
-        
+        left: -100,
+
 
     },
-    cate:{
-        width:25,
-        height:25,
+    cate: {
+        width: 25,
+        height: 25,
 
     },
-    catetext:{
+    catetext: {
         color: 'white',
-        height:40,
+        height: 40,
     }
 })

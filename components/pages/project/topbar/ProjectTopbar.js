@@ -1,38 +1,32 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import { StatusBar } from 'expo-status-bar';
+import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 
+const ProjectTopbar = () => {
+    return (<View style={styles.container}>
 
+        {/* <StatusBar style="dark" /> */}
 
-const Topbar = () => {
-    return (
-        <View style={styles.container}>
-
-            <StatusBar style="dark" />
-
-            <View style={styles.topbar}>
-                {/* <TouchableOpacity> */}
-                    <View style={styles.menu}>
-                        <View style={styles.line}></View>
-                        <View style={styles.line}></View>
-                        <View style={styles.line}></View>
-                    </View>
-                {/* </TouchableOpacity> */}
-                <Image
-                    style={styles.tinyLogo}
-                    source={require('./logo.png')}
-                />
-                {/* <TouchableOpacity> */}
-                <Image style={styles.searchIcon} source={require('./search.png')} />
-                {/* </TouchableOpacity> */}
-
+        <View style={styles.topbar}>
+            {/* <TouchableOpacity> */}
+            <View style={styles.menu}>
+                <View style={styles.line}></View>
+                <View style={styles.line}></View>
+                <View style={styles.line}></View>
             </View>
+            {/* </TouchableOpacity> */}
+            <Image
+                style={styles.tinyLogo}
+                source={require('./logo.png')}
+            />
+
 
         </View>
+
+    </View>
     )
 }
 
-export default Topbar
+export default ProjectTopbar
 const styles = StyleSheet.create({
     container: {
         // flex: 1,
@@ -41,6 +35,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         height: '8%',
         // position: 'absolute',
+        marginTop:20,
 
 
     },
@@ -75,7 +70,7 @@ const styles = StyleSheet.create({
         left: -160,
         display: 'flex',
         zIndex: 3,
-        // marginTop: -23,
+        marginTop: -23,
     },
     line: {
         width: '90%',
@@ -88,14 +83,7 @@ const styles = StyleSheet.create({
         borderRadius: 100,
 
     },
-    searchIcon: {
-        width: "8%",
-        height: "50%",
-        zIndex: 13,
-        left: 150,
-        position: 'relative',
-        top: -19,
-    },
+
 
 
 });
