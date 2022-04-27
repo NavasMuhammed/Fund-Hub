@@ -3,10 +3,10 @@ import React from 'react'
 
 const Card = () => {
     return (
-        <TouchableOpacity>
-            <View style={styles.card}>
+        
+            <View  style={styles.card}>
 
-                <Image style={styles.project} source={require('./project.jpg')} />
+                <Image style={styles.project}  source={require('./project.jpg')} />
                 <Text style={styles.text}>Farm Frenzy: The farm building game:</Text>
                 <Text style={styles.sub}>grow animals and sell products and create profit and
                     upgrade farm
@@ -43,7 +43,7 @@ const Card = () => {
 
 
             </View>
-        </TouchableOpacity>
+   
     )
 }
 

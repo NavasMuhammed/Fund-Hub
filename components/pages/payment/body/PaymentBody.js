@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image,ScrollView } from 'react-native'
 import React from 'react'
 
 const PaymentBody = () => {
     return (
+        <ScrollView vertical showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
             <View style={styles.mainTextContainer}>
                 <Text style={styles.mainText}>Farm Frenzy: The farm building game:</Text>
@@ -51,6 +52,7 @@ const PaymentBody = () => {
                 </View>
             </View>
         </View>
+                        </ScrollView>
     )
 }
 
@@ -198,7 +200,7 @@ const styles = StyleSheet.create({
         fontSize:15,
     },
     footer: {
-        top:50,
+        top:20,
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         // backgroundColor:"white",

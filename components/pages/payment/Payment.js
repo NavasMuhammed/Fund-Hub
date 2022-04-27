@@ -7,11 +7,8 @@ const Payment = ({navigation}) => {
     return (
         <View style={styles.container}>
 
-            <PaymentTopbar />
-            <Button
-        title="Go to Review"
-        onPress={() => navigation.navigate('Review')}
-      />
+            {/* <PaymentTopbar /> */}
+            
             <PaymentBody />
         </View>
     )
@@ -20,7 +17,8 @@ const Payment = ({navigation}) => {
 export default Payment
 const styles = StyleSheet.create({
     container: {
-        paddingTop:55,
+        // paddingTop:55,
+        
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,

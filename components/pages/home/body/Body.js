@@ -1,19 +1,28 @@
-import { View, Text, StyleSheet, ScrollView} from 'react-native'
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native'
 import React from 'react'
 import Card from '../card/Card'
 
 
-const Body = () => {
+const Body = ({navigation}) => {
     return (
         <ScrollView vertical showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
             <View style={styles.cardContainer}>
                     
-                
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+            <TouchableOpacity onPress={() =>{
+                    console.log("button clicked")
+                    navigation.navigate('Review')}
+                }>
+                <Card  />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() =>{
+                    console.log("button clicked")
+                    navigation.navigate('Review')}
+                }>
+                <Card onPress={() => navigation.navigate('Review')}/>
+                </TouchableOpacity>
+                <Card onPress={() => navigation.navigate('Review')}/>
+                <Card onPress={() => navigation.navigate('Review')}/>
                 
                 
             </View>

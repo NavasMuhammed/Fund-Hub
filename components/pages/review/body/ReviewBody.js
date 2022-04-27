@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image,ScrollView, TouchableOpacity} from 'react-native'
 import React from 'react'
 
-const ReviewBody = () => {
+const ReviewBody = ({navigation}) => {
     return (
+        // <ScrollView vertical showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
             <Image style={styles.pic}
                 source={require('./project.jpg')} />
@@ -32,7 +33,7 @@ const ReviewBody = () => {
             <View style={styles.iconsTray}>
                 <Image style={styles.icon1}
                     source={require('./categories.png')}
-                />
+                    />
                 <Text style={styles.iconText}>
                     Simulation game
                 </Text>
@@ -66,13 +67,20 @@ const ReviewBody = () => {
                 </View>
             </View>
             <View style={styles.footer}>
+            <TouchableOpacity onPress={() =>{
+                    console.log("button clicked")
+                    navigation.navigate('Payment')}
+                }>
                 <View style={styles.button}>
                     <Text style={styles.submit}>
+
                         Fund This Project
                     </Text>
                 </View>
+                    </TouchableOpacity>
             </View>
         </View>
+                    // </ScrollView>
     )
 }
 
@@ -83,6 +91,8 @@ const styles = StyleSheet.create({
         width: 500,
         height: "100%",
         alignItems: 'center',
+        top: -80,
+        zIndex:-100,
 
 
 
@@ -220,9 +230,8 @@ const styles = StyleSheet.create({
         fontSize:16,
     },
     footer: {
-        top:160,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
+        top:130,
+        borderRadius:10,
         // backgroundColor:"white",
         width:413.5,
         alignItems: 'center',

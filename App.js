@@ -17,19 +17,20 @@ export default function App() {
       <Stack.Navigator screenOptions={{
         presentation: 'modal',
         headerStyle: {
-          backgroundColor: '#111111',
+          backgroundColor: 'black',
+          
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
           fontWeight: 'bold',
         },
-      }}  initialRouteName="Home" >
+      }} initialRouteName="Home" >
         <Stack.Screen name="Home" component={Home} style={styles.container} />
         <Stack.Screen name="Review" component={Review} />
         <Stack.Screen name="Payment" component={Payment} />
         <Stack.Screen name="Project" component={Project} />
       </Stack.Navigator>
-</NavigationContainer>
+    </NavigationContainer>
   );
 }
 
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
-    
+
     backgroundColor: 'black'
 
 

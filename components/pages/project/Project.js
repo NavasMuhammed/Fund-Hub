@@ -6,11 +6,8 @@ import ProjectBody from './body/ProjectBody'
 const Project = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <ProjectTopbar />
-        <Button
-        title="Go to Payment"
-        onPress={() => navigation.navigate('Payment')}
-      />
+        {/* <ProjectTopbar /> */}
+        
         <ProjectBody/>
     </View>
   )

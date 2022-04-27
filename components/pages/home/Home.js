@@ -4,18 +4,19 @@ import Body from './body/Body';
 import Topbar from './topbar/Topbar';
 import Menu from './menu/Menu';
 import { Button } from 'react-native';
+
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
         {/* <Menu/> */}
-        <Topbar/>
-       
-      <Button
-        title="Go to Review"
-        onPress={() => navigation.navigate('Review')}
+        {/* <Topbar/> */}
+        <Button style={styles.button}
+        title="Add Project"
+        onPress={() => navigation.navigate('Project')}
       />
+      
     
-        <Body/>
+        <Body navigation={navigation} />
     </View>
   )
 }
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       flex:1,
-      paddingTop:35,
+      // paddingTop:5,
       
       backgroundColor: 'black'
      
@@ -36,7 +37,10 @@ const styles = StyleSheet.create({
       color: 'white',
   
     },
-    
+    button: {
+      width:100,
+      
+    }
   
   });
   
